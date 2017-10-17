@@ -12,7 +12,7 @@
 # ]
 #
 #Book.delete_all
-# 
+#
 # Book.create! [
 #   {name:"The Picture of Dorian Gray", author:"Oscar Wilde"},
 #   {name:"Moby-Dick or The Whale", author:"Herman Melville"},
@@ -21,8 +21,17 @@
 #   {name:"The Old Man and the Sea", author:"Hemingway Ernest"}
 # ]
 
-mynote = Book.find_by name: "Moby-Dick or The Whale"
-mynote.notes.create![
-  {title: "Interesting", note: "Was hard to read for not native English person"},
-  {title: "must read", note: "everyone must read this book"}
+# mynote = Book.find_by name: "Moby-Dick or The Whale"
+# mynote.notes.create![
+#   {title: "Interesting", note: "Was hard to read for not native English person"},
+#   {title: "must read", note: "everyone must read this book"}
+# ]
+
+reviewers = Reviewer.create! [
+  {name:"Arman", password: "abc123"},
+  {name: "Mik", password: "abc123"}
 ]
+Book.all.each do |book|
+book.reviewer= reviewers.sample
+book.save!
+end
