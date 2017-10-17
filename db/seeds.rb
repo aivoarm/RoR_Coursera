@@ -13,13 +13,13 @@
 #
 #Book.delete_all
 #
-# Book.create! [
-#   {name:"The Picture of Dorian Gray", author:"Oscar Wilde"},
-#   {name:"Moby-Dick or The Whale", author:"Herman Melville"},
-#   {name:"The Testament", author:"Grisham John"},
-#   {name:"Pygmalion", author:"Shaw  George Bernard"},
-#   {name:"The Old Man and the Sea", author:"Hemingway Ernest"}
-# ]
+Book.create! [
+  {name:"The Picture of Dorian Gray", author:"Oscar Wilde"},
+  {name:"Moby-Dick or The Whale", author:"Herman Melville"},
+  {name:"The Testament", author:"Grisham John"},
+  {name:"Pygmalion", author:"Shaw  George Bernard"},
+  {name:"The Old Man and the Sea", author:"Hemingway Ernest"}
+]
 
 # mynote = Book.find_by name: "Moby-Dick or The Whale"
 # mynote.notes.create![
